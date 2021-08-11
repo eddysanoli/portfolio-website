@@ -1,0 +1,66 @@
+/************************** TAG SELECTORS **************************/
+/* Selecciona todas las tags completas */
+
+body {
+    /* Cambio de color de fondo*/
+    background-color: #334756;
+}
+
+h3 {
+    /* Cambio de color de texto */ 
+    color: #FDEFEF;
+
+    /* Cambio de font, tamaño y "peso" */
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    /* Cambio de color de texto */
+    color: #FF4C29;
+
+    /* Cambio de font, tamaño y "peso" */
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+hr {
+    /* Se elimina el estilo "inset" que hr tiene por default */
+    border-style: none;
+
+    /* Se agregan puntitos en la parte de arriba*/
+    /* Se colorea la línea y se modifica el tamaño de puntito */
+    border-top-style: dotted;
+    border-color: #082032;
+    border-width: 6px;
+
+    /* Ancho de la regla */
+    width: 30%;
+}
+
+/************************** CLASS SELECTORS **************************/
+/* Selecciona clases específicas llamándolas como: ".clase" */
+
+.profile {
+
+    max-width: 80%;
+    height: auto;
+
+}
+
+.circular {
+
+    /* Borde redondeado al 100% para que sea una imagen redonda */
+    border-radius: 100%;
+
+}
+
+/* Pseudo-clase "hover", aplica un estilo diferente cuando se pasa el mouse sobre un elemento */
+.circular:hover {
+
+    filter: drop-shadow(0 0 0.3rem #FDEFEF);
+
+}
+
+/**************************** ID SELECTORS ****************************/
+/* Selecciona IDs específicos llamándolos como: "#id". El ID debe ser único */

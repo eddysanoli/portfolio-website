@@ -23,9 +23,22 @@
         <!-- Nombre que aparece en la pestañita del sitio -->
         <title>😎 El Sitio de Lali</title>
 
+        <!-- Estilos CSS aplicados a todo el sitio -->
+        <!-- Se indica donde está la stylesheet del sitio web -->
+        <!-- Nota: Mientras se desarrolle de forma local, el path de "href" no puede llevar un "/" al inicio -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Nota: CSS tiene jerarquía. 
+            Se aplica en el siguiente orden:
+                1. CSS inyectado en un tag
+                2. CSS declarado en un tag de "style" dentro de "head"
+                3. CSS externo
+        -->
+
     </head>
 
     <!-- Contenido del sitio -->
+    <!-- Se inyecta CSS para especificar el color de fondo del body -->
     <body>
 
         <table cellspacing="40">
@@ -33,7 +46,7 @@
                 <td>
                     <!-- Si interesa hacer "Search Engine Optimization" el utilizar un "alt" correcto -->
                     <!-- ayuda a Google a categorizar nuestro sitio -->
-                    <img src="images/profile-pic-circle.png" alt="Foto de Lali">
+                    <img class="profile circular" src="images/profile pic.JPG" alt="Foto de Lali">
                 </td>
                 <td>
                     <h1>Eduardo Santizo</h1>
@@ -64,8 +77,8 @@
         <!-- Lista de puntitos -->
         <ul>
             <li>El Bicho</li>
-            <li>Jesús</li>
-            <li>El Trencito que si Podía</li>
+            <li>Mi Amorcito</li>
+            <li>El Trencito que si podía</li>
         </ul>
 
         <!-- Línea horizontal o "horizontal rule" (hr) -->
