@@ -1,0 +1,286 @@
+/************************** TAG SELECTORS **************************/
+/* Selecciona todas las tags completas */
+
+div {
+    /* Cambio de color de fondo*/
+    background-color: #082032;
+}
+
+body {
+    /* El primer elemento de la página se pega al tope y a los lados */
+    margin: 0;
+
+    /* Se alínean todos los elementos mientras tengamos elementos de texto */
+    /* Nota: Solo alínea cosas que no tienen seteada una propiedad de width */
+    text-align: center;
+
+    /* Tipo de letra */
+    /* Se prueba setear cada font en el website de izquierda a derecha. Si no existe una font en la compu, se prueba con la sigiuente */
+    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+
+    /* Elimina el subrayado automático de los links */
+    text-decoration: none;
+
+    /* Color de font */
+    color: #fad368;
+}
+
+hr {
+    /* Se elimina el estilo "inset" que hr tiene por default */
+    border-style: none;
+
+    /* Se agregan puntitos en la parte de arriba*/
+    /* Se colorea la línea y se modifica el tamaño de puntito */
+    border-top-style: dotted;
+    border-color: rgb(192, 233, 243);
+    border-width: 6px;
+
+    /* Ancho de la regla */
+    width: 10%;
+}
+
+/* =========== TEXTO (H1, H2, H3, p, etc) =========== */
+
+h1 {
+    /* Elimina el margen arriba y abajo del título. Para que el contenido se pegue a las orillas */
+    margin-top: 200px;
+    margin-bottom: 0;
+
+    /* Font stack: Orden en el que se intentarán cargar fonts. Si alguna font no existe 
+       en el sistema del usuario, se prueba con la siguiente font */
+    font-family: 'Hahmlet', serif;
+
+    /* En font size, 16px = 100% = 1em. Se debe escalar el porcentaje para obtener un tamaño acorde. */
+    /* Por ejemplo: Si queremos un tamaño de 60px, el porcentaje debe ser: (60px/16px)*100 = 375% = 3.75em */
+    /* Es importante saber que usar porcentajes o "em" redimensiona de forma dinámica el contenido. */
+    /* El tamaño se hereda de los padres al usar % o "em". Para evitar esto se puede utilizar "rem" */
+    font-size:  3.75rem;
+
+    /* Alternativa para centrar el texto: Usar "margin" */
+    /* margin: 0 auto */
+    /* Esto coloca un margen de cero arriba y abajo, pero a la izquierda 
+       y derecha ajusta automáticamente para centrar el elemento */
+
+    /* Color del texto */
+    color: #FF4C29
+}
+
+h2 {
+    /* Tamaño de 20px: (20px/16px)*100 = 125% = 1.25rem */
+    font-size: 2.5rem; 
+
+    /* Color de font */
+    color: #fad368;
+
+    /* Se cambia el weight de la font */
+    font-weight: bold;
+
+    line-height: 2;
+}
+
+h3 {
+    /* Color de font */
+    color: rgb(39, 123, 145);
+}
+
+h4 {
+    /* Tamaño de 20px: (20px/16px)*100 = 125% = 1.25rem */
+    font-size: 1.25rem; 
+
+    /* Color de font */
+    color: #fad368;
+
+    /* Se cambia el weight de la font */
+    font-weight: bold;
+    line-height: 2;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+
+    /* Color de font */
+    color: rgb(192, 233, 243);
+
+    /* Distancia entre líneas. Se prefiere no utilizar unidades para esta propiedad */
+    line-height: 2;
+}
+
+
+/************************** CLASS SELECTORS **************************/
+/* Selecciona clases específicas llamándolas como: ".clase" */
+
+
+/* =========== DIVS =========== */
+
+/* Sección superior del sitio (planetas) */
+.top-container {
+    padding-top: 100px;
+    position: relative;
+}
+
+/* Sección intermedia (skills) */
+.middle-container {
+    padding-top: 400px;
+    padding-bottom: 100px;
+}
+
+/* Sección intermedia (linkedin/twitter) */
+.bottom-container {
+    background-color: #334756;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+/* Una fila conteniendo un skill */
+.skill-row {
+    width: 50%;
+    margin: 0 auto 200px auto;
+    text-align: left;
+}
+
+/* Div que contiene mi foto de perfil y el texto de descripción */
+.profile {
+    width: 40%;
+    margin: 200px auto 300px auto;
+}
+
+/* Div que contiene las skills */
+.skills {
+    padding-top: 100px;
+}
+
+/* Div con información de contacto */
+.contact-me{
+    padding-top: 100px;
+}
+
+
+/* =========== IMGS =========== */
+
+/* Planeta arriba de "I'm Eduardo" */
+.top-planet {
+    position: absolute;
+    max-width: 180px;
+    left: 65%;
+    top: 10%;
+}
+
+/* Planeta al lado o abajito de "I'm Eduardo" */
+.bottom-planet {
+    position: absolute;
+    max-width: 150px;
+    top: 40%;
+    left: 10%;
+}
+
+/* Planeta debajo de "I'm Eduardo" */
+.main-planet {
+    padding-top: 100px;
+    width: 40%;
+}
+
+/* Redondea las imágenes */
+.circular {
+    /* Borde redondeado al 100% para que sea una imagen redonda */
+    border-radius: 100%;
+}
+
+/* Imagen de perfil como tal */
+.profile-img {
+    /* Se redimensiona la imagen */
+    width: 300px;
+}
+
+/* Imagen que acompaña la skill de arte y dibujo */
+.portrait-img {
+    /* Se redimensiona la imagen */
+    /* El porcentaje esta dado con respecto al padre, que en este caso es el div */
+    width: 25%;
+
+    /* Float: Se hace que las imágenes "floten" a la izquierda del texto */
+    float: left;
+
+    /* Se agrega espacio entre la imagen y el texto */
+    padding-right: 30px;
+}
+
+/* Imagen que acompaña la skill de mecatrónica */
+.robot-img {
+    /* Se redimensiona la imagen */
+    /* El porcentaje esta dado con respecto al padre, que en este caso es el div */
+    width: 25%;
+
+    /* Float: Se hace que las imágenes "floten" a la izquierda del texto */
+    float: right;
+
+    /* Se agrega espacio entre la imagen y el texto */
+    padding-left: 30px;
+}
+
+/* =========== TXTS =========== */
+
+/* Subrayado de texto */
+.underline {
+    text-decoration: underline;
+}
+
+.footer-link {
+    padding: 0 10px 0 10px;
+    font-size: 1.25rem;
+}
+
+.footer-link:hover {
+    color: rgb(192, 233, 243);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+/* =========== BTNS =========== */
+
+.boton_contacto {
+    background: #FF4C29;
+    background-image: -webkit-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -moz-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -ms-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -o-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -webkit-gradient(to bottom, #FF4C29, #B93077);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px;
+    margin-top: 40px;
+    -webkit-box-shadow: 1px 1px 12px 0 #000000;
+    -moz-box-shadow: 1px 1px 12px 0 #000000;
+    box-shadow: 1px 1px 12px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #786763 3px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+ 
+ .boton_contacto:hover {
+    border: solid #FFFFFF 3px;
+    background: #FF4C29;
+    background-image: -webkit-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -moz-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -ms-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -o-linear-gradient(top, #FF4C29, #B93077);
+    background-image: -webkit-gradient(to bottom, #FF4C29, #B93077);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
